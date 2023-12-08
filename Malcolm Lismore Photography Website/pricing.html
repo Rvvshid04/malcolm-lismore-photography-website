@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Look at our services</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pricingstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="nav-logo"><a href="index.html">Malcolm Lismore Photography</a></p>
+            <ul class="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <a href="contact.html" class="action_btn">Contact Me</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="action_btn">Contact Me</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+    
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen= dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <section>
+        <div class="container">
+            <h1>Photography Service Packages</h1>
+            <div class="card-box">
+                <div class="card">
+                    <div class="card-design">
+                        <p class="price">$200/hr</p>
+                        <h3>Wedding Photography</h3> 
+                    </div>
+                    <p>Package Includes</p>
+                    <span class="borderline"></span>
+                    <ul class="card-content">
+                        <li>Full-day coverage (8-10 hours)</li>
+                        <li>Pre-wedding consultation to discuss preferences</li>
+                        <li>High resolution edited images (400-600 photos)</li>
+                        <li>116 x 20-inch canvas print of your favorite photo</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-design">
+                        <p class="price">Customized Hourly Rates</p>
+                        <h3>Special Occasions</h3>
+                    </div>
+                    <p>Package Includes</p>
+                    <span class="borderline"></span>
+                    <ul class="card-content">
+                        <li>Up to 4-hours coverage</li>
+                        <li>One professional photographer</li>
+                        <li>Pre-event consultation to understand your event's unique requirements</li>
+                        <li>High resolution edited images (150-200 photos)</li>
+                        <li>10 5x7-inch prints of your choice</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <div class="card-design">
+                        <p class="price">$250/hr</p>
+                        <h3>Landscape and Wildlife Photography</h3>
+                    </div>
+                    <p>Package Includes</p>
+                    <span class="borderline"></span>
+                    <ul class="card-content">
+                        <li>Full-day coverage (8-10 hours) to a picturesque natural location</li>
+                        <li>Guided by a professional nature photographer</li>
+                        <li>High resolution edited images (50-100 photos)</li>
+                        <li>A coffee table book featuring selected images from the session</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="ft-content">
+            <h3 id="ft-logo">Malcolm Lismore Photography</h3>
+            <div class="sitemap">
+                <ul>
+                    <li class="ft-title">Sitemap</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pricing.html">Our Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+
+        <div class="ft-social">
+            <p class="ft-title">Follow me</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=en"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://lk.linkedin.com/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+            <!-- "&copy;" represents the symbol for copyright -->
+            <p>Copyright &copy; 2023 Malcolm Lismore Photography. Designed and developed by <span>Rvvshid04<span></p>
+        </div>
+    </footer>
+</body>
+</html>

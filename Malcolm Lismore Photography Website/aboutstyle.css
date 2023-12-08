@@ -1,0 +1,119 @@
+
+.abt-content{
+    width: 100%;
+    height: auto;
+    background-color:rgb(141, 166, 234);
+    padding: 50px 0;
+    display: grid;
+    place-items: center;
+}
+
+.abt-content h2{
+   font-size: 27px;
+   font-weight: 500;
+   color: black; 
+   position: relative;
+}
+
+h2::after{
+    position: absolute;
+    content: ' ';
+    width: 50%;
+    height: 4px;
+    left: 50%;
+    bottom: -5px;
+    background-image: linear-gradient(to right,rgb(141, 166, 234), rgb(182, 219, 249) );
+    transform: translateX(-50%);
+}
+
+/* Container CSS */
+
+.container{
+    width: 70%;
+    margin: 5px;
+    height: auto;
+    position: relative;
+}
+
+.container::after{
+    position: absolute;
+    content: '';
+    width: 4px;
+    height: 100%;
+    background-image: linear-gradient(to bottom,rgb(141, 166, 234), rgb(182, 219, 249) );
+}
+
+.container ul{
+    list-style: none;
+}
+
+.container ul li{
+    width: 50%;
+    height: auto;
+    margin-top: 20px;
+    padding: 15px 20px;
+    background-color: #fff;
+    box-shadow: 1px 1px 25px rgba(0,0,0,0.384);
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.container ul li:nth-child(odd){
+    float: left;
+    clear: right;
+    transform: translateX(-30px);
+}
+
+.container ul li:nth-child(even){
+    float: right;
+    clear: left;
+    transform: translateX(30px);
+}
+
+.container ul li:nth-child(4){
+    margin-bottom: 0;
+}
+
+.container ul li.title{
+    font-size: 20px;
+    font-weight: 500;
+    color:rgb(141, 166, 234) ;
+}
+
+ul li p{
+    font-size: 15px;
+    color: #444;
+    margin: 5px 0;
+}
+
+/* Different screen sizes */
+
+@media screen and (max-width:1224px){
+    .container{width: 85%;}
+
+}
+
+@media screen and (max-width:933px){
+    .container{width: 80%; transform: translateX(15px);}
+
+    .container ul::after{
+        left:-30px;
+    }
+
+    .container ul li{
+        width: 100%;
+        float: none;
+        clear: none;
+        margin-bottom: 80px;
+    }
+    .container ul li:nth-child(odd){
+        transform: translateX(0);
+        text-align: left;
+        margin-left: 30px;
+    }
+    .container ul li:nth-child(even){
+        transform: translateX(0);
+        margin-left: 30px;
+    }
+
+}

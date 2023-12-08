@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malcom Lismore Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="nav-logo"><a href="index.html">Malcolm Lismore Photography</a></p>
+            <ul class="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <a href="contact.html" class="action_btn">Contact Me</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="action_btn">Contact Me</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+    
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen= dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <section>
+        <div class="landing">
+            <div class="landing-con">
+                <h3>Welcome to <span id="land-header">Malcolm Lismore</span> Photography</h3>
+                <p>Explore Malcolm's Work</p>
+                <p><a href="gallery.html">Gallery</a></p>
+                <p>Book Malcolm for your special occassion</p>
+                <p><a href="contact.html">Contact Me</a></p>
+            </div>
+        </div>  
+        <div class="abt-home">
+        <div class="abt-content">
+        <h3>Meet Malcolm Lismore, Professional Photographer</h3>
+        <div class="sub-con">
+            <h4>Passionate about nature</h4>
+            <p>Malcolm's love for the natural world, including landscapes, wildlife, and coastal birds.</p>
+        </div>
+        <div class="sub-con">
+            <h4>Years of experience</h4>
+            <p>Mentioning his extensive experience capturing breathtaking moments.</p>
+        </div>
+        <div class="sub-con">
+            <h4>Explore the world through his lens</h4>
+            <p>Encouraging users to explore the gallery and witness his talent.</p>    
+        </div>
+         </div>
+        <img src="./images/Professional-Headshot.png" alt="image on Malcolm">
+        </div>
+
+        <div class="testimonials">
+            <div class="inner">
+                <h3 class="title">Testimonials</h3>
+            <span class="border"></span>
+            <div class="row">
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="./images/testimonial1.jpg" alt="image of a person posing">
+                        <div class="name">Isabella "Bella" Martinez</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                    <p>"Captured every emotion beautifully. Our wedding day feels alive in every photo. Grateful for the priceless memories!"</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="./images/testimonial2.jpg" alt="image of a person posing">
+                        <div class="name">Nathanial "Nathan" Brooks</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                    <p>"Exceptional shots at our family reunion! Every moment treasured. Photographer blended right in. Highly recommended for special events."</p>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="testimonial">
+                        <img src="./images/testimonial3.jpg" alt="image of a person posing">
+                        <div class="name">Ethan Sinclair</div>
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+
+                    <p>"Nature's finest moments, frozen in time. Breathtaking landscapes and wildlife. Photographer's skill shines in each frame. Pure artistry!"</p>
+
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ft-content">
+            <h3 id="ft-logo">Malcolm Lismore Photography</h3>
+            
+                <div class="sitemap">
+                    <ul>
+                        <li class="ft-title">Sitemap</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="pricing.html">Our Services</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+    
+            <div class="ft-social">
+                <p class="ft-title">Follow me</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://twitter.com/?lang=en"  target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://lk.linkedin.com/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <!-- "&copy;" represents the symbol for copyright -->
+            <p>Copyright &copy; 2023 Malcolm Lismore Photography. Designed and developed by <span>Rvvshid04<span></p>
+        </div>
+    </footer>
+</body>
+</html>

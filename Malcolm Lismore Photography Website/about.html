@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find out more about Malcolm Lismore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="aboutstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="nav-logo"><a href="index.html">Malcolm Lismore Photography</a></p>
+            <ul class="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul> 
+            <a href="contact.html" class="action_btn">Contact Me</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="action_btn">Contact Me</a></li>
+            </div>
+        </nav>
+    </header>
+
+       <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+    
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen= dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <section>
+        <div class="abt-content">
+            <h2>About Malcolm Lismore</h2>
+            <div class="container">
+                <ul>
+                    <li>
+                        <h3 class="title">The First Steps</h3>
+                        <p>Malcolm upgraded to a more advanced camera, immersing himself in the technical aspects of capturing the perfect shot. Experimenting with composition, lighting, and various camera settings. </p>
+                    </li>
+                    <li>
+                        <h3 class="title">Wildlife Encouter</h3>
+                        <p>A turning point for Malcolm was when he came face to face with majestic creatures in their natural habitat. The challenge of capturing the fleeting moment ignited a new passion in him</p>
+                    </li>
+                    <li>
+                        <h3 class="title">Photography as a career</h3>
+                        <p>Malcolm kept on honing his skills, his friends and family were astounded by his growing portfolio, and they encouraged him in his pursuit of photography as a profession.</p>
+                    </li>
+                    <li>
+                        <h3 class="title">Inspiring Others</h3>
+                        <p>Now, as a seasoned professional photographer, Malcolm Lismore continues to find innspiration, forming stories through his photography. He shares his knowledge and experiences through workshops, aiming to inspire others to appreciate the beauty of the world and embrace their own creative journeys.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="ft-content">
+            <h3 id="ft-logo">Malcolm Lismore Photography</h3>
+            <div class="sitemap">
+                <ul>
+                    <li class="ft-title">Sitemap</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pricing.html">Our Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+
+        <div class="ft-social">
+            <p class="ft-title">Follow me</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=en" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://lk.linkedin.com/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+            <!-- "&copy;" represents the symbol for copyright -->
+            <p>Copyright &copy; 2023 Malcolm Lismore Photography. Designed and developed by <span>Rvvshid04<span></p>
+        </div>
+    </footer>
+</body>
+</html>

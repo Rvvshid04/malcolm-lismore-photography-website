@@ -1,0 +1,421 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Poppins', 'sans-serif';
+}
+
+/* Need to include the font and font weights */
+/* nav CSS */
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    width:100vw;
+    height: 80px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 1rem;
+}
+
+#nav-logo{
+ font-size: 1.35em;
+ font-weight: bold;
+ text-align: center;
+}
+
+nav a{
+    text-decoration: none;
+    color: #fff; 
+}
+
+nav li{
+    list-style: none;
+}
+
+nav li a{
+    font-size:1rem;
+    transition: 0.1s ease;
+}
+
+nav li a:hover{
+    color:#a6bef5;
+    padding-bottom: 3px;
+    border-bottom: 2px solid #a6bef5;
+}
+
+.nav-ul{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5rem;
+}
+
+nav .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    /* temporary */
+}
+
+.action_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #879ccf;
+    color: #fff;
+    width: 7em;
+    height: 3em;
+    margin-right: 13px;
+    border:none;
+    outline:none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor:pointer;
+}
+
+.action_btn:hover{
+    scale:1.05;
+    color: #fff;
+    background-color: #4f6db3;
+}
+
+.action_btn:active{
+    scale:0.95;
+}
+
+/* dropdown menu css */
+.dropdown-menu{
+    position: absolute;
+    right: 2rem;
+    top: 90px;
+    height: 0;
+    width: 300px;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter:blur(15px) ;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275)
+}
+
+.dropdown-menu.open{
+    height: 260px;
+}
+
+.dropdown-menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown-menu .action_btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+/* END nav CSS */
+
+/* Home Page CSS */
+/* landing section */
+.landing{
+    width: 100vw;
+    height: 90vh;
+    background: url(./images/cliff-landing.jpg);
+    background-size:cover ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#land-header{
+    color: #2a7ddb;
+}
+
+.landing-con{
+    color: #fff;
+    text-align: center;
+    background-color: #111;
+    padding: 0 10px;
+    border-radius: 20px 10px 10px 20px;
+}
+
+.landing-con h3{
+    font-size: 3em;
+    color: #eef0f3;
+}
+
+.landing-con p{
+    font-size: 1.5em;
+    margin:15px 0;
+}
+
+.landing-con p a{
+    text-decoration: none;
+    font-size: 0/9em;
+    color: white;
+    background-color: #2a7ddb;
+    padding: 6px;
+    border-radius: 10px;
+}
+
+.landing-con p a:hover{
+    background-color: #6795c9; 
+}
+
+/* about-home page */
+.abt-home{
+    width: 100vw;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+    color: #fff;
+}
+
+.abt-home h3{
+    font-size: 2em;
+    font-weight: 500;
+    color: #6d91ba;
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+.abt-content{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    line-height: 25px;
+}
+
+.sub-con{
+    margin-bottom:40px;
+}
+
+.abt-home img{
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+}
+
+/* testimonials section */
+.testimonials{
+    padding: 40px 0;
+    background: #f1f1f1;
+    color: #434343;
+    text-align: center;
+    width: 100vw;
+    height: 60vh;
+}
+
+.inner{
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 20px;
+}
+
+.border{
+    width: 160px;
+    height: 5px;
+    background: #6d91ba;
+    margin: 26px auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col{
+    flex: 33.33%;
+    max-width: 33.33%;
+    box-sizing: border-box;
+    padding: 15px;
+}
+
+.testimonial{
+    background: #fff;
+    padding:30px;
+}
+
+.testimonial img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+.name{
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px 0;
+}
+
+.stars{
+    color: #6d91ba;
+    margin: 20px;
+}
+
+/* End of Home Page CSS */
+
+/* Footer CSS */
+footer{
+    background-color: #111;
+    height: auto;
+    width: 100vw;
+    padding:50px 50px 15px 50px ;
+    color: #fff;
+    line-height: 20px;
+
+    margin-top: auto;
+}
+
+.ft-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ft-title{
+    font-size: 20px;
+}
+
+#ft-logo{
+    font-family: 'Poppins','sans-serif';
+    font-size: 1.75em;
+    text-align: center;
+    line-height: 30px;
+}
+
+.sitemap li{
+    list-style:none;
+    line-height: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sitemap a{
+    text-decoration: none;
+}
+
+.sitemap li a{
+    color: #b7b6b6;
+    transition: color .4s ease;
+}
+
+.sitemap li:hover a{
+    color:#fff;
+}
+
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.ft-social p{
+    padding-bottom: 15px;
+}
+
+.ft-social .socials a i {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255,255,255,0.2);
+    margin-right: 10px;
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color:#ffffff;
+    transition: all 0.5s ease;
+}
+
+.ft-social .socials a:hover i {
+    color: #24262b;
+    background-color: #ffffff;
+}
+
+.footer-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #b7b6b6;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+    padding-top:30px;
+    text-align: center;
+}
+
+.footer-bottom span{
+    text-transform: uppercase;
+    opacity: .4;
+}
+
+/* responsive */
+@media (max-width: 767px){
+    /* Footer CSS */
+    footer{
+        height: auto;
+    }
+    .ft-content{
+        display: flex;
+        flex-direction: column;
+    }
+   .sitemap{
+    padding-top:20px;
+    padding-bottom:25px;
+   }
+   /* End Footer CSS */
+
+}
+
+/* nav CSS */
+@media(max-width: 992px){
+ .nav-ul li a, .action_btn{
+    display:none;
+ }
+
+ nav .toggle_btn{
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: block;
+    /* temporary */
+}
+
+.dropdown-menu{
+    display: block;
+}
+}
+
+@media(max-width: 576px){
+    .dropdown-menu{
+        left: 2rem;
+        width: unset;
+    }
+}
+
+/* Media home page css */
+@media screen and (max-width:960px){
+    .col{
+        flex: 100%;
+        max-width: 80%;
+    }
+    
+}

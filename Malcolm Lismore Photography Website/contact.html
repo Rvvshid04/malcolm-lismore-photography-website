@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Malcolm Lismore</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contactstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="nav-logo"><a href="index.html">Malcolm Lismore Photography</a></p>
+            <ul class="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <a href="contact.html" class="action_btn">Contact Me</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="action_btn">Contact Me</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+    
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen= dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <section class="contact">
+        <div class="content">
+            <h2>Questions?</h2>
+            <h2>Comments?</h2>
+            <h2>We'd love to hear from you.</h2>
+            <p>You can expect to have a response to your query anywhere between 2:00 PM to 7:00PM during the week. On weekends, Malcolm takes a 
+                well-deserved rest from work, even so, he would be available 9:00AM -10:30AM. So, don't hesitate to leave a message!</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i>
+                    </div>
+                    <dv class="text">
+                        <h3>Address</h3>
+                        <p>Bught Road, Inverness 5SS</p>
+                    </dv>
+                    <div class="icon">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                    </div>
+                    <dv class="text">
+                        <h3>Telephone</h3>
+                        <p>+44-2606315201</p>
+                    </dv>
+                    <div class="icon">
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                    </div>
+                    <dv class="text">
+                        <h3>Email</h3>
+                        <p>malcolmlismore@gmail.com</p>
+                    </dv>
+                </div>
+            </div>
+
+            <div class="contactForm">
+                <form action="contact2.php" method="post">
+                    <h2>Contact Me</h2>
+                    <label for="name">First Name:</label>
+                    <input type="text" id="name" name="fname" class="inputBox" required>
+
+                    <label for="name">Surname:</label>
+                    <input type="text" id="name" name="lname" class="inputBox" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" class="inputBox" required>
+                    
+                    <label for="phone">Phone number:</label>
+                    <input type="tel" id="phone" name="phone" class="inputBox" required>
+                    
+                    <label for="location">Location:</label>
+                    <input type="text" id="location" name="location" class="inputBox" required>
+                    
+                    <label for="event-date">Event Date:</label>
+                    <input type="text" id="event-date" name="event_date" class="inputBox" required pattern="\d{1,2}/\d{1,2}/\d{4}" placeholder="dd/mm/yyyy">
+                    
+                    <label for="event-date">Event Type:</label>
+                    <div class="radio-box">
+                        <div class="radio-choice">
+                            <label for="wed">Wedding</label>
+                            <input type="radio" name="event" value="event-wed">
+                        </div>
+                        <div class="radio-choice">
+                            <label for="special">Special event</label>
+                            <input type="radio" name="event" value="event-spec" >    
+                        </div>
+                        <div class="radio-choice">
+                            <label for="Wildlife">Landscape and Wildlife</label>
+                            <input type="radio" name="event" value="event-wld" >    
+                        </div>
+                    </div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message_text" rows="4" required></textarea>
+                    
+                        <input type="submit" value="Send Inquiry" id="submit-btn">
+                      </form>
+                </form>
+            </div>
+        </div>
+ </section>
+
+    <script>
+        let radioBtns = document.querySelectorAll ("input[name='event']");
+
+        let findSelected=()=>{
+            let selected = document.querySelector("input[name='event']:checked").value;
+            // Put what you want to do with the selected value here...
+        }
+        radioBtns.forEach(radioBtn => {
+            radioBtn.addEventListener("change", findSelected)
+        })
+    </script>
+        
+    <footer>
+        <div class="ft-content">
+            <h3 id="ft-logo">Malcolm Lismore Photography</h3>
+            <div class="sitemap">
+                <ul>
+                    <li class="ft-title">Sitemap</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pricing.html">Our Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+
+        <div class="ft-social">
+            <p class="ft-title">Follow me</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=en"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://lk.linkedin.com/"  target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+            <!-- "&copy;" represents the symbol for copyright -->
+            <p>Copyright &copy; 2023 Malcolm Lismore Photography. Designed and developed by <span>Rvvshid04<span></p>
+        </div>
+    </footer>
+</body>
+</html>

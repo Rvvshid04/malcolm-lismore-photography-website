@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery of Malcolm's photos</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="gallerystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <p id="nav-logo"><a href="index.html">Malcolm Lismore Photography</a></p>
+            <ul class="nav-ul">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+            <a href="contact.html" class="action_btn">Contact Me</a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="dropdown-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="pricing.html">Our Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html" class="action_btn">Contact Me</a></li>
+            </div>
+        </nav>
+    </header>
+
+    <script>
+        const toggleBtn = document.querySelector('.toggle_btn')
+        const toggleBtnIcon = document.querySelector('.toggle_btn i')
+        const dropDownMenu = document.querySelector('.dropdown-menu')
+    
+        toggleBtn.onclick= function(){
+            dropDownMenu.classList.toggle('open')
+            const isOpen= dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+
+    <section>
+        <ul>
+            <li class="list active" data-filter="all">All</li>
+            <li class="list" data-filter="wedding">Wedding</li>
+            <li class="list" data-filter="specialevent">Special Events</li>
+            <li class="list" data-filter="wldlnd">Wildlife & Landscape</li>
+        </ul>
+        <div class="product">
+            <div class="itemBox" data-item="wedding"><img src="./images/img6.jpg" alt="wedding"></div>
+            <div class="itemBox" data-item="wedding"><img src="./images/img7.jpg" alt="wedding"></div>
+            <div class="itemBox" data-item="wedding"><img src="./images/img8.jpg" alt="wedding"></div>
+            <div class="itemBox" data-item="wedding"><img src="./images/img9.jpg" alt="wedding"></div>
+            <div class="itemBox" data-item="wedding"><img src="./images/img10.jpg" alt="wedding"></div>
+            <div class="itemBox" data-item="specialevent"><img src="./images/img11.jpg" alt="specialevent"></div>
+            <div class="itemBox" data-item="specialevent"><img src="./images/img12.jpg" alt="specialevent"></div>
+            <div class="itemBox" data-item="specialevent"><img src="./images/img13.jpg" alt="specialevent"></div>
+            <div class="itemBox" data-item="specialevent"><img src="./images/img14.jpg" alt="specialevent"></div>
+            <div class="itemBox" data-item="specialevent"><img src="./images/img15.jpg" alt="specialevent"></div>
+            <div class="itemBox" data-item="wldlnd"><img src="./images/img1.jpg" alt="Wildlife & Landscape"></div>
+            <div class="itemBox" data-item="wldlnd"><img src="./images/img2.jpg" alt="Wildlife & Landscape"></div>
+            <div class="itemBox" data-item="wldlnd"><img src="./images/img3.jpg" alt="Wildlife & Landscape"></div>
+            <!-- <div class="itemBox" data-item="wldlnd"><img src="../images/img4.jpg" alt="Wildlife & Landscape"></div> -->
+            <div class="itemBox" data-item="wldlnd"><img src="./images/img5.jpg" alt="Wildlife & Landscape"></div>
+        </div>
+    </section>
+
+    <script>
+        let list = document.querySelectorAll('.list');
+        let itemBox =document.querySelectorAll('.itemBox');
+
+        for (let i = 0; i<list.length; i++){
+            list[i].addEventListener('click', function(){
+                for(let j = 0; j<list.length; j++){
+                    list[j].classList.remove('active');
+                }
+                this.classList.add('active');
+
+                let dataFilter = this.getAttribute('data-filter');
+
+                for(let k =0; k<itemBox.length; k++){
+                    itemBox[k].classList.remove('active');
+                    itemBox[k].classList.add('hide');
+
+                    if(itemBox[k].getAttribute('data-item')==dataFilter || dataFilter == "all"){
+                        itemBox[k].classList.remove('hide');
+                        itemBox[k].classList.add('active');
+                    }
+                }
+            })
+        }
+    </script>
+
+    <footer>
+        <div class="ft-content">
+            <h3 id="ft-logo">Malcolm Lismore Photography</h3>
+            <div class="sitemap">
+                <ul>
+                    <li class="ft-title">Sitemap</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="pricing.html">Our Services</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+
+        <div class="ft-social">
+            <p class="ft-title">Follow me</p>
+            <div class="socials">
+                <a href="https://www.facebook.com/"  target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/?lang=en"  target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/"  target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://lk.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        </div>
+
+        <div class="footer-bottom">
+            <!-- "&copy;" represents the symbol for copyright -->
+            <p>Copyright &copy; 2023 Malcolm Lismore Photography. Designed and developed by <span>Rvvshid04<span></p>
+        </div>
+    </footer>
+</body>
+</html>
