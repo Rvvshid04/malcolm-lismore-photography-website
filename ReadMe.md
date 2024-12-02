@@ -13,7 +13,7 @@
 
 - The 'malcolmlismorephotography.sql' is an exported file of the 'malcolmlismorephotography' database.
 
-##### If you wish to use the contact form and check if its working,
+#### If you wish to use the contact form and check if its working,
 1. Enter http://localhost/phpmyadmin/
 2. Go to 'Import' on the navigation bar
 3.  In the 'File to Import' section, click 'Choose File', and locate the 'malcolmlismorephotography.sql'
