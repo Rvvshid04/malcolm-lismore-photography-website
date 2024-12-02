@@ -1,4 +1,4 @@
-## Photography Website project for HTML, CSS, JavaScript, PHP, and MySQL (using XAMPP)
+## Photography Website project developed using HTML, CSS, JavaScript, PHP, and MySQL (using XAMPP) for end-of-module project
 
 > ### **Hi**,
 > This is Rvvshid04. Here is a step-by-step process to running the
