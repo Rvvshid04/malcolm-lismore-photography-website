@@ -1,13 +1,15 @@
-Hi,
-This is Rvvshid04. Here is a step-by-step process to running the
-website.
+## Photography Website project for HTML, CSS, JavaScript, PHP, and MySQL (using XAMPP)
 
-You need to download xampp for the following instructions.
-Step-by-step process to running the website:
-1.) Copy the "Malcolm Lismore Photography Website" folder and put it in the htdocs folder in the 'xampp' folder. 
-2.) Run xampp
-3.) Start 'Apache' and 'MySQL' modules.
-4.) Enter "http://localhost/Malcolm%20Lismore%20Photography%20Website/index.html" into the searchbar of a browser. This should open the home page for the 'Malcolm Lismore Photography' Website.
+> ### **Hi**,
+> This is Rvvshid04. Here is a step-by-step process to running the
+> website.
+
+- You need to download xampp for the following instructions.
+- #### Step-by-step process to running the website:
+1.  Copy the "Malcolm Lismore Photography Website" folder and put it in the htdocs folder in the 'xampp' folder. 
+2.  Run xampp
+3.  Start 'Apache' and 'MySQL' modules.
+4.  nter "http://localhost/Malcolm%20Lismore%20Photography%20Website/index.html" into the searchbar of a browser. This should open the home page for the 'Malcolm Lismore Photography' Website.
 
 The 'malcolmlismorephotography.sql' is an exported file of the 'malcolmlismorephotography' database.
 
