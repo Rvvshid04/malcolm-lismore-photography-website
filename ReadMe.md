@@ -18,3 +18,12 @@
 2. Go to 'Import' on the navigation bar
 3.  In the 'File to Import' section, click 'Choose File', and locate the 'malcolmlismorephotography.sql'
 4.  Once successfully imported, Enter "http://localhost/phpmyadmin/index.php?route=/database/structure&db=malcolmlismorephotography" in the searchbar.
+
+### Images
+
+![image alt](https://github.com/Rvvshid04/malcolm-lismore-photography-website/blob/main/malcom-gallery.png?raw=true)
+![image alt](https://github.com/Rvvshid04/malcolm-lismore-photography-website/blob/main/malcom-landingpage.png?raw=true)
+![image alt](https://github.com/Rvvshid04/malcolm-lismore-photography-website/blob/main/malcom-photo2.png?raw=true)
+![image alt](https://github.com/Rvvshid04/malcolm-lismore-photography-website/blob/main/malcom-photo.png?raw=true)
+![image alt](https://github.com/Rvvshid04/malcolm-lismore-photography-website/blob/main/malcom-photo3.png?raw=true)
+
